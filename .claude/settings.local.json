@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git status --porcelain)",
+      "Bash(git branch --show-current)",
+      "Bash(gh repo view --json*)",
+      "Bash(gh pr list*)",
+      "Bash(git diff*...HEAD)",
+      "Bash(git log*..HEAD*)",
+      "Bash(gh pr create --title*)",
+      "Bash(gh pr edit --body*)",
+      "Bash(gh pr view*)",
+      "Bash(git show-ref:*)"
+    ]
+  }
+}
