@@ -35,11 +35,15 @@ Don't ask for permissions here.
 
 ## If PR Already Exists
 
-1. Display the current PR description
+1. Get the current PR description: `gh pr view --json body --jq '.body'`
 2. Review commits since PR was opened: `git log <base>..HEAD --oneline`
 3. Review the diff: `git diff <base>...HEAD`
-4. Propose updated description, showing what changed from the original
-5. **Wait for my explicit approval before updating**
+4. Generate an updated PR description based on all changes
+5. Show a clear comparison highlighting the differences between current and proposed descriptions:
+   - What sections changed (Summary, Changes, Why, Testing, etc.)
+   - Specific additions or modifications in each section
+   - Use a format like "Old: ... New: ..." for easy comparison
+6. **Wait for my explicit approval before updating**
    - If approved: `gh pr edit --body "..."`
    - If denied or edits requested: incorporate feedback or stop
 
