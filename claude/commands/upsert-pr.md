@@ -1,15 +1,18 @@
 ---
 description: Prepare a pull request from the current branch, or update an existing PR's description
-allowed-tools: Bash(git status --porcelain), Bash(git branch --show-current), Bash(gh repo view --json*), Bash(gh pr list*), Bash(git diff*...HEAD), Bash(git log*..HEAD*), Bash(gh pr create --title*), Bash(gh pr edit --body*), Bash(gh pr view*)
+allowed-tools: Bash(git status*), Bash(git branch --show-current), Bash(git rev-list*), Bash(gh repo view --json*), Bash(gh pr list*), Bash(git diff*...HEAD), Bash(git log*..HEAD*), Bash(gh pr create --title*), Bash(gh pr edit --body*), Bash(gh pr view*)
 ---
 
 # Pull Request Preparation
 
 ## Pre-flight Checks
 
-1. Check for uncommitted changes: `git status --porcelain`
+1. Identify the base branch: `gh repo view --json defaultBranchRef --jq '.defaultBranchRef.name'`
+2. Check for uncommitted changes: `git status --porcelain`
    - If changes exist, warn me and ask whether to proceed or abort
-2. Identify the base branch: `gh repo view --json defaultBranchRef --jq '.defaultBranchRef.name'`
+3. Check for unpushed commits: `git rev-list @{u}..HEAD --count` (or check `git status` for "ahead by N commits")
+   - If unpushed commits exist, warn me and ask whether to proceed or abort
+   - Note: You can update PR descriptions without pushing, but the commits won't be visible on GitHub yet
 
 ## Check for Existing PR
 
