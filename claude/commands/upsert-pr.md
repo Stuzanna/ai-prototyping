@@ -13,7 +13,6 @@ allowed-tools: Bash(git status --porcelain), Bash(git branch --show-current), Ba
 
 ## Check for Existing PR
 
-Don't ask for permissions here.
 1. Get current branch: `git branch --show-current`
 2. Check for PR: `gh pr list --head <current-branch> --json number --jq 'length'`
    - Returns `0` = No PR exists, proceed to create flow
