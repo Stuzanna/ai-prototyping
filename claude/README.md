@@ -1,14 +1,17 @@
 # Claude Commands
 
 ## Create commands directory if it doesn't exist
+
 ```bash
 mkdir -p .claude/commands
 ```
 
 ## Copy command files
+
 ```bash
 cp foo.md .claude/commands/foo.md
 ```
+
 ## Commands
 
 `upsert-pr` is my own one, `pr` is an example for preparing a PR I used as a base.
