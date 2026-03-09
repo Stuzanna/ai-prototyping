@@ -11,7 +11,8 @@
       "Bash(gh pr create --title*)",
       "Bash(gh pr edit --body*)",
       "Bash(gh pr view*)",
-      "Bash(git show-ref:*)"
+      "Bash(git show-ref:*)",
+      "Bash(npx markdownlint-cli2*)"
     ]
   }
 }
