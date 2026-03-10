@@ -1,23 +1,5 @@
-# Claude Commands
+# Claude and Claude Code
 
-## Create commands directory if it doesn't exist
+Notes and cheatsheet.
 
-```bash
-mkdir -p .claude/commands
-```
-
-## Copy command files
-
-```bash
-cp foo.md .claude/commands/foo.md
-```
-
-## Commands
-
-`upsert-pr` is my own one, `pr` is an example for preparing a PR I used as a base.
-
-## allowed-tools
-
-Note I hit issues with nested commands within brackets in the allowed-tools, it doesn't seem to like this, even if you explicitly allow the full command. Suggest refactoring into two commands or pipe.
-
-Note you need to add to `.claude/settings.local.json` as well to avoid the prompt.
+Richer content on, and credit to, [gh:luongnv89/claude-howto](https://github.com/luongnv89/claude-howto/blob/main/README.md).

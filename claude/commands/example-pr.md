@@ -1,3 +1,5 @@
+The below is an example command, a.k.a. skill, creating a pull request.
+My skills are stored in [/ai-prototyping/.claude/commands](/ai-prototyping/.claude/commands).
 ---
 description: Clean up code, stage changes, and prepare a pull request
 allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git diff:*), Bash(npm test:*), Bash(npm run lint:*)
