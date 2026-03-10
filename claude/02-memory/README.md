@@ -25,6 +25,7 @@ Good for starting project, establishing standards, creating a doc about codebase
 ```
 
 Recognised as memory update, it asks which memory file to update, project or personal.
+You can also specify where to save rules to, which memory.
 
 Alternatively:
 
@@ -64,6 +65,8 @@ Higher levels having precedence.
 1. User-level rules, personal rules (all projects) `~/.claude/rules/*.md`.
 1. Local project memory - Personal project-specific preferences, `./CLAUDE.local.md`.
 1. Auto memory, Claude's automatic notes and learnings, `~/.claude/projects/<project>/memory/`
+
+You can specify where to save rules to, which memory.
 
 ## Modular rules
 
