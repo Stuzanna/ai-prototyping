@@ -1,0 +1,10 @@
+{
+  "config": {
+    "MD013": false
+  },
+  "globs": [
+    "**/*.md",
+    "!claude/01-commands/example-*.md",
+    "!claude/02-memory/examples/**"
+  ]
+}

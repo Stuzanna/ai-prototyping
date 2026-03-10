@@ -17,7 +17,8 @@ allowed-tools: Bash(git status*), Bash(npx markdownlint-cli2*)
 
 ## Run Linter
 
-1. Execute linter with auto-fix: `npx markdownlint-cli2 --fix "**/*.md"`
+1. Execute linter with auto-fix: `npx markdownlint-cli2 --fix`
+   - Uses config from `.markdownlint-cli2.jsonc` (e.g. excluding files)
    - This will automatically fix issues like:
      - MD047: Files must end with a single newline
      - MD012: Multiple consecutive blank lines
